@@ -8,7 +8,8 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
         
         <script src="./src/login.js" type="text/javascript"></script>
-        <script>
+        <script src="./src/main_index.mjs" type="module"></script>
+        <script> 
             window.onload = function() {
                 if (!window.localStorage.getItem('id') && !window.localStorage.getItem('pw')) {
                     document.location.href = 'main.html?login=false'
@@ -18,10 +19,12 @@
                 console.log('onload!')
                 console.log(document.getElementById('userinfo'))
             }
+            function dev_resetLS(key) {
+                window.localStorage.removeItem(key)
+            }
         </script>
     </head>
     <body>
-        <script src="./src/main_index.js" type="module"></script>
         <div class="header">
             <a id="userinfo"><i>Logged in as</i></a>
             <a class="logoutA" onclick="logout()">Log Out</a>
@@ -38,27 +41,27 @@
                             <tr style="background-color:lightgray"><th>신청\요일</th><th>월</th><th>화</th><th>수</th><th>목</th><th>금</th></tr>
                             <tr>
                                 <th>신청여부</th>
-                                <th class="a01" name="a01"></th>
-                                <th class="a02" name="a02"></th>
-                                <th class="a03" name="a03"></th>
-                                <th class="a04" name="a04"></th>
-                                <th class="a05" name="a05"></th>
+                                <th class="a01" name="ca01"></th>
+                                <th class="a02" name="ca02"></th>
+                                <th class="a03" name="ca03"></th>
+                                <th class="a04" name="ca04"></th>
+                                <th class="a05" name="ca05"></th>
                             </tr>
                         </table>
                     </div>
                 </form>
                 <span class="SelectClass" style="position: relative; top: 50px;">신청하기</span>
-                <form method="post" id="reqForm">
+                <form method="post" id="reqForm" name="request">
                     <div class="reqClass" style="position: relative; top:50px;">
                         <table class="currentTable" border="1">
                             <tr style="background-color: lightgray"><th>신청\요일</th><th>월</th><th>화</th><th>수</th><th>목</th><th>금</th></tr>
                             <tr>
                                 <th>신청여부</th>
-                                <th class="b01" name="b01"><input type="checkbox" name="b01" id="b01" class="checkMain"></th>
-                                <th class="b02" name="b02"><input type="checkbox" name="b02" id="b02"class="checkMain"></th>
-                                <th class="b03" name="b03"><input type="checkbox" name="b03" id="b03"class="checkMain"></th>
-                                <th class="b04" name="b04"><input type="checkbox" name="b04" id="b04"class="checkMain"></th>
-                                <th class="b05" name="b05"><input type="checkbox" name="b05" id="b05"class="checkMain"></th>
+                                <th class="b01" name="cb01"><input type="checkbox" name="b01" id="b01" class="checkMain"></th>
+                                <th class="b02" name="cb02"><input type="checkbox" name="b02" id="b02"class="checkMain"></th>
+                                <th class="b03" name="cb03"><input type="checkbox" name="b03" id="b03"class="checkMain"></th>
+                                <th class="b04" name="cb04"><input type="checkbox" name="b04" id="b04"class="checkMain"></th>
+                                <th class="b05" name="cb05"><input type="checkbox" name="b05" id="b05"class="checkMain"></th>
                             </tr>
                         </table>
                         <input type="submit" class="submitRequest" placeholder="SUBMIT" id="submitReq">
