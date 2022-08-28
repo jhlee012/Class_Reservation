@@ -1,0 +1,91 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Noto Sans KR", sans-serif;
+}
+
+#mainTitle {
+    color: rgb(0, 0, 0);
+    background-color:rgba(255, 255, 255, 0.114);
+    font-size: 30px;
+    text-align: center;
+
+    text-shadow: 1px 1px 1px #000000;
+}
+
+body {
+/*     background-image: url("https://cdn.discordapp.com/attachments/825332979978076161/1011999726134108260/photo-1474540412665-1cdae210ae6b.jpg");
+    background-size: cover; */
+    background-color: lightgray;
+}
+
+.header {
+    background-color:rgba(0, 0, 0, 0.208)
+}
+.logoutA {
+    text-decoration: underline;
+    font-size: 16px;
+    cursor:pointer;
+}
+
+.logoutA:hover {
+    color:chartreuse;
+    font-size: 18px;
+    transition: ease 0.3s;
+}
+
+#userinfo {
+    font-size: 16px;
+    cursor:text;
+    font-style: italic;
+    margin-right: 10px;
+}
+
+.mainMenu {
+    background-color: transparent;
+}
+
+.logoImage {
+    background-color: #FFFFFF;
+}
+
+.mainSquare {
+    top: 100px;
+    width: 100%;
+    height: 700px;
+    background:rgb(255, 255, 255);
+    position: relative;
+    top: 60px;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    box-shadow: 2px 2px 2px #000000;
+    font-size: 30px;
+
+}
+.current {
+    font-size: 200px;
+}
+
+
+
+.reqClass {
+    text-align: center;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.currentTable {
+    width: 80%;
+    font-size: 20px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.checkMain {
+    transform: scale(2);
+}

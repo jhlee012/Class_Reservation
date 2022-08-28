@@ -1,0 +1,58 @@
+
+.detail1 {
+    background-color: transparent;
+}
+
+.developer {
+    font-size: 20px;
+    margin-top: 0;
+    margin-bottom: 0px;
+    padding: 0;
+    background-color: transparent;
+}
+
+.main_detail {
+    outline: none;
+    cursor: pointer;
+    text-align: left;
+    margin-bottom: 0;
+    background-color: transparent;
+}
+
+.main_detail::webkit-details-marker {
+    display: none;
+}
+
+.main_detail p {
+    font-size: 5; 
+    color: darkcyan; 
+    text-align: left;
+    margin-top: 1;
+}
+
+
+body {
+    background-color: transparent;
+    text-shadow: darkslategray;
+    text-align: center;
+}
+
+.title {
+    text-align: center;
+    color: #ededed;
+    font-size: 35pt;
+    margin-bottom: 0%;
+    margin-top: 0%;
+    height: 100px;
+    background-color: transparent;
+}
+
+.title_description {
+    font-size: 3;
+    color:rgb(255, 255, 255);
+    text-decoration: underline;
+    background-color: transparent;
+    margin-top: 0;
+    display: none;
+    vertical-align: middle;
+}
