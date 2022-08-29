@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Test Website</title>
+        <link rel="stylesheet" href="./css/main.css" >
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+        <script src="./src/modules/login.mjs" type="module"></script>
+        <script src="./src/loginpage.mjs" type="module"></script>
+        <script src="./src/loginpage_app.js" type="text/javascript"></script>
+    </head>
+    <body onkeydown="EnterLogin()">
+        <div id="bodyStart">
+            <div class="main_box">
+                <div class="login_box" >
+                    <form action="#"id="loginForm" name="loginForm" method="post" onsubmit="return false">
+                        <h2 id="loginText"><b><img class="lockImage"src="https://cdn.discordapp.com/attachments/825332979978076161/1012210815748800554/moral04_1.jpg"></b></h2>
+                        <div class="login_id">
+                            <h4>ID:</h4>
+                            <input type="email" name="id" id="id" placeholder="Enter a ID:">
+        
+                        </div>
+                        <div class ="login_pw">
+                            <h4>Password:</h4>
+                            <input type="password" name="pw" id="pw" placeholder="Password">
+                        </div>
+                        <div class="loginSubmit">
+                            <a class="loginButton" onclick="submitLogin()">
+                                 LOGIN
+                            </a>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

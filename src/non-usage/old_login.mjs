@@ -39,10 +39,10 @@ function onEnterLogin() {
 
 }
 
-function login() {
+export function login(id, pw, refresh) {
 
-    var $id = document.getElementById('id').value;
-    var $pw = document.getElementById('pw').value
+    var $id = id || document.getElementById('id').value;
+    var $pw = pw || document.getElementById('pw').value
 
     console.log($id)
     console.log($pw)
@@ -53,12 +53,28 @@ function login() {
         if ($pw == passarr[index]) {
             loginStorage($id, $pw)
             console.log('login successful')
-            window.location.href = 'loggedin.html';
-            return;
+
+            if (refresh == (true || undefined)) {
+                alert('Successfully log-in')
+                window.location.href = 'loggedin.html'
+            }
+            return true;
         }
 
-        else return alert("Id or Password does not match.")
-    } else return alert("Id or Password does not match.")
+        else {
+            if (refresh == (true || undefined)) {
+                alert("Id or Password does not match.")
+                window.location.href = 'login.html?loginFailed'
+            }
+            return false
+        }
+    } else {
+        if(refresh == (true || undefined)) {
+            alert("Id or Password does not match.")
+            window.location.href = 'login.html?loginFailed'
+        }
+        return false
+    }
     
 }
 
@@ -69,9 +85,27 @@ function logout() {
         window.localStorage.removeItem('id');
         window.localStorage.removeItem('pw')
         alert("Successfully Logged-Out")
-        window.location.href = 'main.html'
+        window.location.href = 'login.html'
         return;
     }
 
     else return alert("아니이게뭔데!!!")
 }
+
+
+function login2(event) {
+    alert('Submitting..')
+    event.preventDefault()
+    let query = document.querySelector('#loginForm')
+
+    let id = query.id.value
+    let pw = query.pw.value
+
+    login(id, pw, true)
+}
+
+function listenerLogin() {
+    document.querySelector('#loginForm').addEventListener('submit', login2, false)
+}
+
+listenerLogin()

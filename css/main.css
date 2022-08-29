@@ -49,12 +49,6 @@ li {
     bottom: 100px;
 }
 
-#loginForm {
-    width: 100%;
-    height: 100%;
-    align-items: center;
-    align-content: center;
-}
 
 .login_id {
     margin-top: 20px;
@@ -142,5 +136,14 @@ li {
   
   .loginButton:active {
     top: 1px;
+  }
+
+  #loginForm {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 100%;
+    align-items: center;
+    text-align: center;
   }
 
