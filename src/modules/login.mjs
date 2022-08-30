@@ -5,6 +5,7 @@ export function Login_init() {
 }
 
 export function autologin() {
+    console.log('autologin..')
     if (window.localStorage.getItem('id') && window.localStorage.getItem('pw')) {
         document.getElementById('id').value = atob(window.localStorage.getItem('id'))
         document.getElementById('pw').value = atob(window.localStorage.getItem('pw'))
@@ -40,13 +41,12 @@ export function setLoginStorage(id, pw) {
 
 export function loginRequested(event) {
     event.preventDefault()
-    alert('requested!')
 
     let a = login()
 
     if (a == true) {
         alert('Success')
-        window.location.href('loggedin.html')
+        window.location.href = 'loggedin.html'
     } else {
         alert("Id or Password does not match!")
         window.location.reload()
@@ -64,4 +64,28 @@ export function logout() {
 
     alert('Successfully Logged-Out!')
     window.location.href = 'login.html'
+}
+
+export function checkLogin() {
+    let id = window.localStorage.getItem('id')
+    let pw = window.localStorage.getItem('pw')
+
+    if (!window.localStorage.getItem('id') && !window.localStorage.getItem('pw')) {
+        window.location.href = 'login.html?login=false'
+        return alert("Please Log-In first to access!")
+    }
+
+/*     let loginres = login(atob(id), atob(pw), false)
+
+    if (loginres == false) {
+        window.location.href = 'login.html?login=false'
+        alert('Error ; Log-in Failed')
+        window.localStorage.removeItem('id')
+        window.localStorage.removeItem('pw')
+        return; 
+    } */
+
+    document.getElementById('userinfo').textContent = "Logged In as " + atob(window.localStorage.getItem('id'))
+    console.log('onload!')
+    console.log(document.getElementById('userinfo'))
 }

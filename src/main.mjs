@@ -1,44 +1,16 @@
-var req = document.querySelector('#reqForm')
+import * as loginControl from './modules/login.mjs'
 
-console.log('main_index is here')
+var req = document.querySelector('#reqForm')
 
 window.onload = function (){
     document.getElementById('mainTitle').textContent = "OnLoad Function()"
-    checkLogin()    
+    loginControl.checkLogin()  
     get_reqed()
 }
 
-/**
- * @brief For ???
- * @returns 
- */
-function easteregg() {
-    return document.getElementById('mainTitle').textContent = "????????"
-}
 
-function checkLogin() {
-    let id = window.localStorage.getItem('id')
-    let pw = window.localStorage.getItem('pw')
 
-    if (!window.localStorage.getItem('id') && !window.localStorage.getItem('pw')) {
-        document.location.href = 'login.html?login=false'
-        return alert("Please Log-In first to access!")
-    }
 
-/*     let loginres = login(atob(id), atob(pw), false)
-
-    if (loginres == false) {
-        window.location.href = 'login.html?login=false'
-        alert('Error ; Log-in Failed')
-        window.localStorage.removeItem('id')
-        window.localStorage.removeItem('pw')
-        return; 
-    } */
-
-    document.getElementById('userinfo').textContent = "Logged In as " + atob(window.localStorage.getItem('id'))
-    console.log('onload!')
-    console.log(document.getElementById('userinfo'))
-}
 
 
 function get_reqed() {
@@ -107,8 +79,6 @@ function request(event) {
 
 }
 
-function init() {
-    req.addEventListener("submit", request, false)
-}
+req.addEventListener("submit", request, false)
 
-init()
+document.getElementById('logoutT').onclick = loginControl.logout
