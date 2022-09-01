@@ -24,23 +24,26 @@
         </div>
         <div class="mainDiv">
             <div class="mainSquare">
-                <span class="Current">현황</span>
                 <form method="post" id="mainForm">
-                    <div class="reqClass" id = 'reqClass1'>
-                        <table class="currentTable" border="1">
-                            <tr style="background-color:lightgray"><th>신청\요일</th><th>월</th><th>화</th><th>수</th><th>목</th><th>금</th></tr>
-                            <tr>
-                                <th>신청여부</th>
-                                <th class="a01" name="ca01"></th>
-                                <th class="a02" name="ca02"></th>
-                                <th class="a03" name="ca03"></th>
-                                <th class="a04" name="ca04"></th>
-                                <th class="a05" name="ca05"></th>
-                            </tr>
-                        </table>
-                    </div>
+                    <fieldset class="reqField" >
+                        <legend id="requestedLegend">신청여부</legend>
+                        <label id="reqClass1">
+                            <table class="requestedTable" border="1">
+                                <tr style="background-color:lightgray"><th>신청\요일</th><th>월</th><th>화</th><th>수</th><th>목</th><th>금</th></tr>
+                                <tr>
+                                    <th>신청여부</th>
+                                    <th class="a01" name="ca01"></th>
+                                    <th class="a02" name="ca02"></th>
+                                    <th class="a03" name="ca03"></th>
+                                    <th class="a04" name="ca04"></th>
+                                    <th class="a05" name="ca05"></th>
+                                </tr>
+                            </table>
+                        </label>
+
+                    </fieldset>
                 </form>
-                <span class="SelectClass" style="position: relative; top: 50px;">신청하기</span>
+                <span class="SelectClass" style="position: relative; top: 50px; font-size: 25px;">신청하기</span>
                 <form method="post" id="reqForm" name="request">
                     <div class="reqClass" style="position: relative; top:50px;">
                         <table class="currentTable" border="1">
@@ -54,8 +57,15 @@
                                 <th class="b05" name="cb05"><input type="checkbox" name="b05" id="b05"class="checkMain"></th>
                             </tr>
                         </table>
-                        <input type="submit" class="submitRequest" placeholder="SUBMIT" id="submitReq">
+                        <input type="submit"value="SUBMIT" id="submitReq">
                     </div>
+                </form>
+                <form>
+                    <fieldset id="announceField">
+                        <legend id="announceLegend" >공지사항</legend>
+                        <label id="announceLabel">Test Content</label>
+                    </fieldset>
+                </div>
                 </form>
             </div>
         </div>

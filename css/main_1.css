@@ -89,3 +89,70 @@ body {
 .checkMain {
     transform: scale(2);
 }
+
+#announceField {
+    position: relative;
+    top: 100px;
+    width: 80%;
+    margin: 0 auto;
+}
+
+#announceLegend {
+    background-color: #000000;
+    color: #FFFFFF;
+    padding: 3px 6px;
+    font-size: 25px;
+}
+
+.reqField {
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    width: 80%;
+    margin: 0 auto;
+    top: 20px;
+}
+
+#requestedLegend {
+    background-color: #000000;
+    color: #FFFFFF;
+    padding: 3px 6px;
+    font-size: 25px;    
+    position: relative;
+    bottom: 10px;
+}
+
+#reqClass1 {
+    text-align: center;
+    justify-content: center;
+    width: 100%;
+    position: relative;
+    padding: 3px 3px 3px 3px;
+    bottom: 4px;
+}
+
+.requestedTable {
+    position: relative;
+    width: 90%;
+    margin: 0 auto;
+    font-size: 20px;
+    top: 2px;
+    bottom: 2px;
+}
+
+.SelectClass {
+    background-color: #000000;
+    color: #FFFFFF;
+    padding: 3px 6px;
+    margin-bottom: 10px;
+}
+
+#submitReq {
+    transform: scale(1.5);
+    position: relative;
+    top: 20px;
+    border-color: #FFFFFF;
+    border-radius: 10px;
+}

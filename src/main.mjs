@@ -19,8 +19,19 @@ function get_reqed() {
     if (!info_json) {
         let div = document.getElementById('reqClass1')
         div.innerHTML = 
-            '<span style="font-size: 25px" color="#ff0000"><i>Not Requested..</i></span>'
+            '<i>Not Requested..</i>'
         return;
+    }
+
+    let jsonid = info_json.id
+
+    if (jsonid !== window.localStorage.getItem('id')) {
+        window.localStorage.removeItem('id')
+        window.localStorage.removeItem('pw')
+        window.localStorage.removeItem('reqs')
+
+        alert('정보가 현재 로그인 된 아이디와 일치하지 않아 초기화되었습니다. 재로그인이 필요합니다.')
+        location.href = 'login.html?infoNotMatch'
     }
 
     let a1 = document.querySelector('.a01')
@@ -51,7 +62,8 @@ function request(event) {
         2: req.b02.checked,
         3: req.b03.checked,
         4: req.b04.checked,
-        5: req.b05.checked
+        5: req.b05.checked,
+        'id':localStorage.getItem('id')
     }
 
     console.log(reqform)
