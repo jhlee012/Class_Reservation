@@ -40,6 +40,7 @@ li {
 
 .lockImage {
     object-fit: fill;
+    margin-top: 10px;
 }
 
 #loginText {
@@ -102,7 +103,6 @@ li {
     cursor: pointer;
     transition-duration: 0.4s;
     -webkit-transition-duration: 0.4s; /* Safari */
-    width: 60%;
   }
   
   .loginButton:hover {

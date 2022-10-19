@@ -91,6 +91,12 @@ function request(event) {
 
 }
 
-req.addEventListener("submit", request, false)
+function CancelRequest() {
+    window.localStorage.removeItem('reqs')
+    window.alert('Successfully Deleted all requests.')
+    window.location.reload()
+}
 
+req.addEventListener("submit", request, false)
+document.getElementById('cancelReq').addEventListener('click', CancelRequest, false)
 document.getElementById('logoutT').onclick = loginControl.logout
