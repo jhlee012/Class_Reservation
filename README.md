@@ -1,2 +1,2 @@
 # ClassReservation
- Class Reservation for GAON
+ *this project had been canceled - Not for usage*
